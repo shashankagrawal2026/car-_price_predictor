@@ -1,0 +1,28 @@
+[
+    {
+        "name": "columntransformer",
+        "class": "ColumnTransformer",
+        "transformers": [
+            {
+                "name": "onehot",
+                "class": "OneHotEncoder",
+                "columns": [
+                    "name",
+                    "company",
+                    "fuel_type"
+                ]
+            },
+            {
+                "name": "passthrough",
+                "class": "str",
+                "columns": [
+                    "other_feature"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "linearregression",
+        "class": "LinearRegression"
+    }
+]
